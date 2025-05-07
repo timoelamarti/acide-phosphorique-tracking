@@ -1,0 +1,191 @@
+.process-flow-diagram {
+    width: 100%;
+  }
+  
+  .diagram-container {
+    background-color: var(--gray-100);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin: 1.5rem 0;
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body.dark .diagram-container {
+    background-color: var(--gray-700);
+  }
+  
+  .process-node {
+    background-color: white;
+    border-radius: var(--border-radius-sm);
+    padding: 1rem;
+    box-shadow: var(--shadow-sm);
+    margin: 0.5rem;
+    min-width: 150px;
+  }
+  
+  body.dark .process-node {
+    background-color: var(--gray-800);
+  }
+  
+  .node-title {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+  }
+  
+  body.dark .node-title {
+    color: var(--gray-300);
+  }
+  
+  .node-body {
+    display: flex;
+    align-items: center;
+  }
+  
+  .node-icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .tank-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%231e88e5"><path d="M4 20h16V4H4v16z"/></svg>');
+  }
+  
+  .filter-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ff9800"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/></svg>');
+  }
+  
+  .processor-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234caf50"><path d="M15 9H9v6h6V9zm-2 4h-2v-2h2v2zm8-2V9h-2V7a2 2 0 00-2-2h-2V3h-2v2h-2V3H9v2H7c-1.1 0-2 .9-2 2v2H3v2h2v2H3v2h2v2c0 1.1.9 2 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 002-2v-2h2v-2h-2v-2h2zm-4 6H7V7h10v10z"/></svg>');
+  }
+  
+  .production-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23f44336"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>');
+  }
+  
+  .node-value {
+    font-size: 0.875rem;
+  }
+  
+  .process-node-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .process-arrow {
+    width: 100%;
+    height: 2rem;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 8" fill="%23adb5bd"><path d="M0 3h18v2H0V3zm20 0l4 4-4-4 4-4-4 4z"/></svg>');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0.5rem 0;
+  }
+  
+  .storage-tank {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .tank-level {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(30, 136, 229, 0.2);
+    z-index: 0;
+    transition: height 1s ease-in-out;
+  }
+  
+  .acid-28-tank .tank-level {
+    background-color: rgba(30, 136, 229, 0.3);
+  }
+  
+  .acid-54-tank .tank-level {
+    background-color: rgba(76, 175, 80, 0.3);
+  }
+  
+  .capacity-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--gray-600);
+    margin-top: 0.25rem;
+  }
+  
+  body.dark .capacity-label {
+    color: var(--gray-400);
+  }
+  
+  .process-distribution {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .distribution-arrows {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .distribution-nodes {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .diagram-legend {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .legend-color {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+  
+  .status-green {
+    background-color: var(--success-color);
+  }
+  
+  .status-yellow {
+    background-color: var(--warning-color);
+  }
+  
+  .status-red {
+    background-color: var(--danger-color);
+  }
+  
+  .process-node.status-green {
+    border-left: 4px solid var(--success-color);
+  }
+  
+  .process-node.status-yellow {
+    border-left: 4px solid var(--warning-color);
+  }
+  
+  .process-node.status-red {
+    border-left: 4px solid var(--danger-color);
+  }
+  
+  .echelon-nodes, .dap-nodes {
+    display: flex;
+    gap: 1rem;
+  }

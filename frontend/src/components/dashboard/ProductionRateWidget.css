@@ -1,0 +1,47 @@
+.production-rate-widget {
+    height: 100%;
+  }
+  
+  .production-comparison {
+    margin: 1.5rem 0;
+  }
+  
+  .efficiency-indicators {
+    margin-top: 2rem;
+  }
+  
+  .efficiency-indicator {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .indicator-label {
+    width: 100px;
+    font-size: 0.875rem;
+  }
+  
+  .indicator-gauge {
+    flex-grow: 1;
+    height: 0.5rem;
+    background-color: var(--gray-200);
+    border-radius: 0.25rem;
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+  
+  body.dark .indicator-gauge {
+    background-color: var(--gray-700);
+  }
+  
+  .indicator-value {
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .indicator-percentage {
+    width: 50px;
+    text-align: right;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }

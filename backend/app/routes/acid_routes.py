@@ -6,7 +6,7 @@ from ..services.acid_service import AcidService
 from datetime import datetime, timedelta
 
 router = APIRouter(
-    prefix="/api/acid",
+    prefix="/acid",
     tags=["acid"],
     responses={404: {"description": "Not found"}},
 )

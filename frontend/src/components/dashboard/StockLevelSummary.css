@@ -1,0 +1,104 @@
+.stock-level-summary {
+    height: 100%;
+  }
+  
+  .stock-panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .stock-panels {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .stock-panel {
+    background-color: white;
+    border-radius: var(--border-radius-sm);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+    border-top: 4px solid var(--primary-color);
+  }
+  
+  body.dark .stock-panel {
+    background-color: var(--gray-800);
+  }
+  
+  .stock-panel.status-green {
+    border-top-color: var(--success-color);
+  }
+  
+  .stock-panel.status-yellow {
+    border-top-color: var(--warning-color);
+  }
+  
+  .stock-panel.status-red {
+    border-top-color: var(--danger-color);
+  }
+  
+  .volume-display {
+    margin: 1rem 0;
+  }
+  
+  .volume-value {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .volume-percentage {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+  }
+  
+  body.dark .volume-percentage {
+    color: var(--gray-400);
+  }
+  
+  .stock-gauge {
+    width: 100%;
+    height: 0.5rem;
+    background-color: var(--gray-200);
+    border-radius: 0.25rem;
+    margin: 1rem 0;
+    overflow: hidden;
+  }
+  
+  body.dark .stock-gauge {
+    background-color: var(--gray-700);
+  }
+  
+  .stock-level-indicator {
+    height: 100%;
+    transition: width 1s ease-in-out;
+  }
+  
+  .time-until-empty {
+    font-size: 0.875rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .time-until-empty .label {
+    color: var(--gray-600);
+  }
+  
+  body.dark .time-until-empty .label {
+    color: var(--gray-400);
+  }
+  
+  .stock-trend-chart {
+    background-color: white;
+    border-radius: var(--border-radius-sm);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  body.dark .stock-trend-chart {
+    background-color: var(--gray-800);
+  }
+  
